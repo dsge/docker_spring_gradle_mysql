@@ -8,7 +8,10 @@ before_install:
 
 script:
   - docker build -t mycompany/myapp .
-  - docker run -p 3000:8198 --env DATABASE_HOST=db --env DATABASE_USER=root --env DATABASE_PASSWORD=ROOT. --env DATABASE_NAME=myapp --env DATABASE_PORT=3306 --name springapp1 --link mysql1:db mycompany/myapp
+# igazából felesleges elindítani
+#
+# de ha elindítjuk, akkor úgy kellene elindítani, hogy az ki is lépjen egy idő után, mert különben lógva hagyja a CI buildet
+#  - docker run -p 3000:8198 --env DATABASE_HOST=db --env DATABASE_USER=root --env DATABASE_PASSWORD=ROOT. --env DATABASE_NAME=myapp --env DATABASE_PORT=3306 --name springapp1 --link mysql1:db mycompany/myapp
 
 # deploy:
 # - ittlehetnedeployolniproductionbenhamindenfaszánlefutott
