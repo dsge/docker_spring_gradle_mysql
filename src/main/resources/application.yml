@@ -30,7 +30,7 @@ spring:
     platform: mysql
     username: user
     password: password
-    #initialization-mode: always
+    initialization-mode: always
     driver-class-name: com.mysql.jdbc.Driver
   application:
     name: test-service
