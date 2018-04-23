@@ -1,4 +1,4 @@
-# docker_spring_gradle_mysql
+# docker_spring_gradle_mysql [![Build Status](https://travis-ci.org/dsge/docker_spring_gradle_mysql.svg?branch=master)](https://travis-ci.org/dsge/docker_spring_gradle_mysql)
 
 Mysql adatbázis indítása dockeren belül (opcionális, csak ha nincs már meglevő db-d)
 ---
