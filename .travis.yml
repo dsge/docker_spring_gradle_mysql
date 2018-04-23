@@ -1,0 +1,15 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=ROOT. -e MYSQL_DATABASE=myapp -d mysql:5.7
+
+script:
+  - docker build -t mycompany/myapp .
+  - docker run -p 3000:8198 --env DATABASE_HOST=db --env DATABASE_USER=root --env DATABASE_PASSWORD=ROOT. --env DATABASE_NAME=myapp --env DATABASE_PORT=3306 --name springapp1 --link mysql1:db mycompany/myapp
+
+# deploy:
+# - ittlehetnedeployolniproductionbenhamindenfaszánlefutott
+
